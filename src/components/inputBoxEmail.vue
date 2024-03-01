@@ -1,17 +1,18 @@
 <script>
-export default{
+export default {
   name: "inputBoxEmail",
 };
 </script>
 
 <template>
   <div class="input-box-email">
-    <input type="email" class="input-field" placeholder="Почта">
+    <input type="email" class="input-field" placeholder="Почта" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.input-box-email {}
+.input-box-email {
+}
 .input-field {
   display: block;
   width: 100%;

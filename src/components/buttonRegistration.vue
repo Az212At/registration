@@ -1,5 +1,5 @@
 <script>
-export default{
+export default {
   name: "button",
 };
 </script>
@@ -11,7 +11,8 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-.button {}
+.button {
+}
 .btn {
   border: none;
   padding: 20px 28px;
@@ -19,6 +20,6 @@ export default{
   color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 </style>

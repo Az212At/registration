@@ -1,17 +1,18 @@
 <script>
-export default{
+export default {
   name: "inputBoxPassword",
 };
 </script>
 
 <template>
   <div class="input-box-password">
-    <input type="password" class="input-field" placeholder="Пароль">
+    <input type="password" class="input-field" placeholder="Пароль" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.input-box-password {}
+.input-box-password {
+}
 .input-field {
   display: block;
   width: 100%;

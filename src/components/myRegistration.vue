@@ -1,5 +1,4 @@
 <script>
-
 import inputBoxEmail from "./inputBoxEmail.vue";
 import inputBoxPassword from "./inputBoxPassword.vue";
 import buttonRegistration from "./buttonRegistration.vue";
@@ -8,9 +7,9 @@ export default {
   components: {
     inputBoxEmail,
     inputBoxPassword,
-    buttonRegistration
-  }
-}
+    buttonRegistration,
+  },
+};
 </script>
 
 <template>
@@ -34,5 +33,4 @@ export default {
   display: block;
   width: 500px;
 }
-
 </style>

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "inputBoxEmail",
+  name: "InputBoxEmail",
 };
 </script>
 
@@ -10,7 +10,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .input-box-email {
 }
 .input-field {

@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import MainLayout from "../layouts/MainLayout.vue";
+import myRegistration from "../components/myRegistration.vue";
 
-let router;
-router = createRouter({
+const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -11,9 +11,9 @@ router = createRouter({
       component: MainLayout,
       children: [
         {
-          path: "/myRegistration",
+          path: "",
           name: "myRegistration",
-          component: () => import("@/views/MyRegistrationView.vue"),
+          component: myRegistration,
         },
         {
           path: "/myHome",

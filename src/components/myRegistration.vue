@@ -4,20 +4,22 @@ import inputBoxPassword from "./inputBoxPassword.vue";
 import buttonRegistration from "./buttonRegistration.vue";
 
 export default {
+  name: "MyRegistration",
+
   components: {
-    inputBoxEmail,
-    inputBoxPassword,
-    buttonRegistration,
+    InputBoxEmail: inputBoxEmail,
+    InputBoxPassword: inputBoxPassword,
+    ButtonRegistration: buttonRegistration,
   },
 };
 </script>
 
 <template>
   <div class="container">
-    <form class="form" id="registration-form">
-      <input-box-email></input-box-email>
-      <input-box-password></input-box-password>
-      <buttonRegistration></buttonRegistration>
+    <form id="registration-form" class="form">
+      <InputBoxEmail></InputBoxEmail>
+      <InputBoxPassword></InputBoxPassword>
+      <ButtonRegistration></ButtonRegistration>
     </form>
   </div>
 </template>

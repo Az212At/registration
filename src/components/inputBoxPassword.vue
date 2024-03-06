@@ -1,17 +1,24 @@
 <script>
-export default{
-  name: "inputBoxPassword",
+export default {
+  name: "InputBoxPassword",
 };
 </script>
 
 <template>
   <div class="input-box-password">
-    <input type="password" class="input-field" placeholder="Пароль">
+    <input
+      v-model="password"
+      type="password"
+      class="input-field"
+      placeholder="Пароль"
+      @input="validateForm"
+    />
   </div>
 </template>
 
-<style lang="scss" scoped>
-.input-box-password {}
+<style lang="css" scoped>
+.input-box-password {
+}
 .input-field {
   display: block;
   width: 100%;

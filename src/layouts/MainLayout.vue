@@ -1,15 +1,16 @@
 <script>
-export default{
-    name: "MainLayout",
+export default {
+  name: "MainLayout",
 };
 </script>
 
 <template>
-    <div class="main-layout">
-      <RouterView />
-    </div>
+  <div class="main-layout">
+    <RouterView />
+  </div>
 </template>
 
-<style lang="scss" scoped>
-.main-layout {}
+<style scoped>
+.main-layout {
+}
 </style>

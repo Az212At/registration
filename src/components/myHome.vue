@@ -1,6 +1,6 @@
 <script>
-export default{
-  name: "myHome",
+export default {
+  name: "MyHome",
 };
 </script>
 
@@ -10,6 +10,7 @@ export default{
   </div>
 </template>
 
-<style lang="scss" scoped>
-.my-home {}
+<style lang="css" scoped>
+.my-home {
+}
 </style>

@@ -1,17 +1,24 @@
 <script>
-export default{
-  name: "inputBoxEmail",
+export default {
+  name: "InputBoxEmail",
 };
 </script>
 
 <template>
   <div class="input-box-email">
-    <input type="email" class="input-field" placeholder="Почта">
+    <input
+      v-model="email"
+      type="email"
+      class="input-field"
+      placeholder="Почта"
+      @input="validateForm"
+    />
   </div>
 </template>
 
-<style lang="scss" scoped>
-.input-box-email {}
+<style lang="css" scoped>
+.input-box-email {
+}
 .input-field {
   display: block;
   width: 100%;

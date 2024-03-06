@@ -1,17 +1,20 @@
 <script>
-export default{
-  name: "button",
+export default {
+  name: "ButtonRegistration",
 };
 </script>
 
 <template>
   <div class="button">
-    <button type="submit" class="btn">Войти</button>
+    <button type="submit" class="btn" :disabled="!isFormValid" @click="login">
+      Войти
+    </button>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.button {}
+<style lang="css" scoped>
+.button {
+}
 .btn {
   border: none;
   padding: 20px 28px;
@@ -19,6 +22,6 @@ export default{
   color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 </style>

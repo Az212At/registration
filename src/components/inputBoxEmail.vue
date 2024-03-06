@@ -6,7 +6,13 @@ export default {
 
 <template>
   <div class="input-box-email">
-    <input type="email" class="input-field" placeholder="Почта" />
+    <input
+      v-model="email"
+      type="email"
+      class="input-field"
+      placeholder="Почта"
+      @input="validateForm"
+    />
   </div>
 </template>
 

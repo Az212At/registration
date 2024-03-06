@@ -6,7 +6,13 @@ export default {
 
 <template>
   <div class="input-box-password">
-    <input type="password" class="input-field" placeholder="Пароль" />
+    <input
+      v-model="password"
+      type="password"
+      class="input-field"
+      placeholder="Пароль"
+      @input="validateForm"
+    />
   </div>
 </template>
 

@@ -6,7 +6,9 @@ export default {
 
 <template>
   <div class="button">
-    <button type="submit" class="btn">Войти</button>
+    <button type="submit" class="btn" :disabled="!isFormValid" @click="login">
+      Войти
+    </button>
   </div>
 </template>
 

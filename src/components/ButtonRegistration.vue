@@ -1,12 +1,25 @@
 <script>
 export default {
   name: "ButtonRegistration",
+  emits: ["submitForm"],
+
+  props: {
+    isFormValid: {
+      type: Boolean,
+      default: false,
+    },
+  },
 };
 </script>
 
 <template>
   <div class="button">
-    <button type="submit" class="btn" :disabled="!isFormValid" @click="login">
+    <button
+      type="submit"
+      class="btn"
+      :disabled="!isFormValid"
+      @click="$emit('submitForm')"
+    >
       Войти
     </button>
   </div>

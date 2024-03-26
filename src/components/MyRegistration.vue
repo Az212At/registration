@@ -1,14 +1,14 @@
 <script>
-import inputBoxEmail from "./inputBoxEmail.vue";
-import inputBoxPassword from "./inputBoxPassword.vue";
-import buttonRegistration from "./buttonRegistration.vue";
+import InputBoxEmail from "./InputBoxEmail.vue";
+import InputBoxPassword from "./InputBoxPassword.vue";
+import ButtonRegistration from "./ButtonRegistration.vue";
 export default {
   name: "MyRegistration",
 
   components: {
-    InputBoxEmail: inputBoxEmail,
-    InputBoxPassword: inputBoxPassword,
-    ButtonRegistration: buttonRegistration,
+    InputBoxEmail,
+    InputBoxPassword,
+    ButtonRegistration,
   },
 
   data() {
@@ -41,9 +41,18 @@ export default {
 <template>
   <div class="container">
     <form id="registration-form" class="form">
-      <InputBoxEmail></InputBoxEmail>
-      <InputBoxPassword></InputBoxPassword>
-      <ButtonRegistration></ButtonRegistration>
+      <InputBoxEmail
+        v-model="email"
+        @validateForm="validateForm"
+      ></InputBoxEmail>
+      <InputBoxPassword
+        v-model="password"
+        @validateForm="validateForm"
+      ></InputBoxPassword>
+      <ButtonRegistration
+        :is-form-valid="isFormValid"
+        @submitForm="login"
+      ></ButtonRegistration>
     </form>
   </div>
 </template>

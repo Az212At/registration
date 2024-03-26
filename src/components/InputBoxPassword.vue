@@ -1,23 +1,24 @@
 <script>
 export default {
-  name: "InputBoxEmail",
+  name: "InputBoxPassword",
+  emits: ["validateForm"],
 };
 </script>
 
 <template>
-  <div class="input-box-email">
+  <div class="input-box-password">
     <input
-      v-model="email"
-      type="email"
+      v-model="password"
+      type="password"
       class="input-field"
-      placeholder="Почта"
-      @input="validateForm"
+      placeholder="Пароль"
+      @input="$emit('validateForm')"
     />
   </div>
 </template>
 
 <style lang="css" scoped>
-.input-box-email {
+.input-box-password {
 }
 .input-field {
   display: block;

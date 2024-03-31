@@ -4,30 +4,24 @@ export default {
   emits: ["submitForm"],
 
   props: {
-    isFormValid: {
+    disabled: {
       type: Boolean,
       default: false,
+    },
+
+    type: {
+      type: String,
+      default: "button",
     },
   },
 };
 </script>
 
 <template>
-  <div class="button">
-    <button
-      type="submit"
-      class="btn"
-      :disabled="!isFormValid"
-      @click="$emit('submitForm')"
-    >
-      Войти
-    </button>
-  </div>
+  <button :type="type" class="btn" :disabled="disabled">Войти</button>
 </template>
 
 <style lang="css" scoped>
-.button {
-}
 .btn {
   border: none;
   padding: 20px 28px;
@@ -36,5 +30,10 @@ export default {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.2s;
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
 }
 </style>

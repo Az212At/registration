@@ -10,6 +10,18 @@ export default {
     },
   },
 
+  computed: {
+    formattedValue: {
+      get() {
+        return this.modelValue;
+      },
+
+      set(newValue) {
+        this.$emit("update:modelValue", newValue);
+      },
+    },
+  },
+
   methods: {
     updateEmail(value) {
       this.$emit("update:email", value);
@@ -21,11 +33,10 @@ export default {
 <template>
   <div class="input-box-email">
     <input
-      :value="email"
+      v-model="formattedValue"
       type="email"
       class="input-field"
       placeholder="Почта"
-      @input="updateEmail($event.target.value)"
     />
   </div>
 </template>

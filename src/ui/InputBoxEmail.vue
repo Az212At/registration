@@ -13,11 +13,11 @@ export default {
   computed: {
     formattedValue: {
       get() {
-        return this.modelValue;
+        return this.email;
       },
 
       set(newValue) {
-        this.$emit("update:modelValue", newValue);
+        this.$emit("update:email", newValue);
       },
     },
   },

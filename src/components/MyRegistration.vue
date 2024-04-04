@@ -30,7 +30,7 @@ export default {
 
   methods: {
     login() {
-      if (this.isFormValid) {
+      if (this.validateForm) {
         localStorage.setItem("email", this.email);
         this.$router.push("/myHome");
       }

@@ -1,18 +1,25 @@
 <script>
 export default {
   name: "InputBoxPassword",
-  emits: ["validateForm"],
+  emits: ["update:password"],
+
+  props: {
+    password: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 
 <template>
   <div class="input-box-password">
     <input
-      v-model="password"
+      :value="password"
       type="password"
       class="input-field"
       placeholder="Пароль"
-      @input="$emit('validateForm')"
+      @input="$emit('update:password', $event.target.value)"
     />
   </div>
 </template>

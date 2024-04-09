@@ -14,11 +14,19 @@ export default {
       default: "button",
     },
   },
+
+  methods: {
+    submitForm() {
+      this.$emit("submitForm");
+    },
+  },
 };
 </script>
 
 <template>
-  <button :type="type" class="btn" :disabled="disabled">Войти</button>
+  <button :type="type" class="btn" :disabled="disabled" @click="submitForm">
+    Войти
+  </button>
 </template>
 
 <style lang="css" scoped>

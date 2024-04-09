@@ -1,54 +1,16 @@
 <script>
-import InputBoxEmail from "../ui/InputBoxEmail.vue";
-import InputBoxPassword from "../ui/InputBoxPassword.vue";
-import ButtonRegistration from "../ui/ButtonRegistration.vue";
+import InputBoxRegistration from "@/components/InputBoxRegistration.vue";
 export default {
   name: "MyRegistration",
 
   components: {
-    InputBoxEmail,
-    InputBoxPassword,
-    ButtonRegistration,
-  },
-
-  data() {
-    return {
-      email: "",
-      password: "",
-    };
-  },
-
-  computed: {
-    validateForm() {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const isEmailValid = emailRegex.test(this.email);
-      const isPasswordValid = this.password.trim().length >= 8;
-
-      return isEmailValid && isPasswordValid;
-    },
-  },
-
-  methods: {
-    login() {
-      if (this.validateForm) {
-        localStorage.setItem("email", this.email);
-        this.$router.push("/myHome");
-      }
-    },
+    InputBoxRegistration,
   },
 };
 </script>
 
 <template>
-  <div class="container">
-    <form id="registration-form" class="form" @submit.prevent="login">
-      <InputBoxEmail v-model="email" />
-
-      <InputBoxPassword v-model="password" />
-
-      <ButtonRegistration :disabled="isFormValid" type="submit" />
-    </form>
-  </div>
+  <InputBoxRegistration />
 </template>
 
 <style>

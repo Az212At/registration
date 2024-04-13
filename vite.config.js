@@ -2,9 +2,10 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import eslintPlugin from "vite-plugin-eslint";
 import path, { resolve } from "path";
+import VueDevTools from "vite-plugin-vue-devtools";
 
 export default defineConfig({
-  plugins: [vue(), eslintPlugin()],
+  plugins: [vue(), eslintPlugin(), VueDevTools({ componentInspector: false })],
 
   server: {
     port: 8081,

@@ -1,14 +1,16 @@
 <script>
 export default {
-  name: "MyRegistrationView",
+  name: "HomeView",
 };
 </script>
 
 <template>
-  <div class="my-registration-view"></div>
+  <div class="home-view">
+    <h2>Home</h2>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.my-registration-view {
+.my-home-view {
 }
 </style>

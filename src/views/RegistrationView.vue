@@ -1,14 +1,11 @@
 <script>
-import ButtonRegistration from "@/ui/ButtonRegistration.vue";
 import MainInput from "@/ui/MainInput.vue";
+import ButtonRegistration from "@/ui/ButtonRegistration.vue";
 
 export default {
-  name: "InputBoxRegistration",
+  name: "RegistrationView",
 
-  components: {
-    ButtonRegistration,
-    MainInput,
-  },
+  components: { ButtonRegistration, MainInput },
 
   data() {
     return {
@@ -39,19 +36,17 @@ export default {
 </script>
 
 <template>
-  <div class="input-box-registration">
-    <div class="container">
-      <form id="registration-form" class="form" @submit.prevent="login">
-        <MainInput v-model="email" placeholder="Enter email" />
-        <MainInput v-model="password" placeholder="Enter password" />
+  <div class="registration-view">
+    <form id="registration-form" class="form" @submit.prevent="login">
+      <MainInput v-model="email" placeholder="Enter email" />
+      <MainInput v-model="password" placeholder="Enter password" />
 
-        <ButtonRegistration :disabled="!validateForm" type="submit" />
-      </form>
-    </div>
+      <ButtonRegistration :disabled="!validateForm" type="submit" />
+    </form>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.input-box-registration {
+.registration-view {
 }
 </style>

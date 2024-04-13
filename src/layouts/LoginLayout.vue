@@ -1,16 +1,16 @@
 <script>
 export default {
-  name: "MainLayout",
+  name: "LoginLayout.vue",
 };
 </script>
 
 <template>
-  <div class="main-layout">
+  <div class="login-layout">
     <RouterView />
   </div>
 </template>
 
 <style scoped>
-.main-layout {
+.login-layout {
 }
 </style>

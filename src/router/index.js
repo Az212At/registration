@@ -1,25 +1,23 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import MainLayout from "@/layouts/MainLayout.vue";
-import MyRegistration from "@/components/MyRegistration.vue";
-import MyHome from "@/components/MyHome.vue";
+import LoginLayout from "@/layouts/LoginLayout.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      name: "MainLayout",
-      component: MainLayout,
+      name: "LoginLayout",
+      component: LoginLayout,
       children: [
         {
           path: "",
-          name: "MyRegistration",
-          component: MyRegistration,
+          name: "Registration",
+          component: () => import("@/views/RegistrationView.vue"),
         },
         {
-          path: "/MyHome",
-          name: "MyHome",
-          component: MyHome,
+          path: "/home",
+          name: "HomeView",
+          component: () => import("@/views/HomeView.vue"),
         },
       ],
     },

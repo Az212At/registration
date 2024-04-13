@@ -1,15 +1,13 @@
 <script>
 import ButtonRegistration from "@/ui/ButtonRegistration.vue";
-import InputBoxPassword from "@/ui/InputBoxPassword.vue";
-import InputBoxEmail from "@/ui/InputBoxEmail.vue";
+import MainInput from "@/ui/MainInput.vue";
 
 export default {
   name: "InputBoxRegistration",
 
   components: {
-    InputBoxEmail,
-    InputBoxPassword,
     ButtonRegistration,
+    MainInput,
   },
 
   data() {
@@ -44,9 +42,8 @@ export default {
   <div class="input-box-registration">
     <div class="container">
       <form id="registration-form" class="form" @submit.prevent="login">
-        <InputBoxEmail v-model="email" />
-
-        <InputBoxPassword v-model="password" />
+        <MainInput v-model="email" placeholder="Enter email" />
+        <MainInput v-model="password" placeholder="Enter password" />
 
         <ButtonRegistration :disabled="!validateForm" type="submit" />
       </form>

@@ -4,7 +4,6 @@ import ButtonRegistration from "@/ui/ButtonRegistration.vue";
 
 export default {
   name: "RegistrationView",
-
   components: { ButtonRegistration, MainInput },
 
   data() {
@@ -25,7 +24,7 @@ export default {
   },
 
   methods: {
-    login() {
+    registration() {
       if (this.validateForm) {
         localStorage.setItem("email", this.email);
         this.$router.push("/myHome");
@@ -37,9 +36,14 @@ export default {
 
 <template>
   <div class="registration-view">
-    <form id="registration-form" class="form" @submit.prevent="login">
-      <MainInput v-model="email" placeholder="Enter email" />
-      <MainInput v-model="password" placeholder="Enter password" />
+    <form class="form" @submit.prevent="registration">
+      <MainInput v-model="email" placeholder="Введите почту" type="email" />
+
+      <MainInput
+        v-model="password"
+        placeholder="Введите пароль"
+        type="password"
+      />
 
       <ButtonRegistration :disabled="!validateForm" type="submit" />
     </form>
@@ -48,5 +52,18 @@ export default {
 
 <style lang="scss" scoped>
 .registration-view {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 </style>

@@ -1,7 +1,6 @@
 <script>
 export default {
-  name: "ButtonRegistration",
-  emits: ["submitForm"],
+  name: "MainButton",
 
   props: {
     disabled: {
@@ -13,27 +12,26 @@ export default {
       type: String,
       default: "button",
     },
-  },
 
-  methods: {
-    submitForm() {
-      this.$emit("submitForm");
+    label: {
+      type: String,
+      default: "",
     },
   },
 };
 </script>
 
 <template>
-  <button :type="type" class="btn" :disabled="disabled" @click="submitForm">
-    Войти
+  <button :type="type" class="main-button" :disabled="disabled">
+    {{ label }}
   </button>
 </template>
 
 <style lang="css" scoped>
-.btn {
+.main-button {
   border: none;
   padding: 20px 28px;
-  background-color: blue;
+  background-color: rgba(255, 204, 73, 1);
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -42,6 +40,14 @@ export default {
   &:disabled {
     background: gray;
     cursor: not-allowed;
+  }
+
+  &:hover {
+    background: rgba(247, 187, 35, 1);
+  }
+
+  &:active {
+    background: rgba(242, 173, 0, 1);
   }
 }
 </style>

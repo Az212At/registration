@@ -45,11 +45,19 @@ export default {
   > input {
     display: block;
     width: 100%;
-    border: 1px solid blue;
+    border: 1px solid #1818ff;
     border-radius: 0;
     padding: 20px 28px;
     margin-bottom: 5px;
     font-size: 20px;
+
+    &:hover {
+      border: 1px solid red;
+    }
+
+    &:focus {
+      border: 1px solid black;
+    }
   }
 }
 </style>

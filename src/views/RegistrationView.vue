@@ -1,10 +1,10 @@
 <script>
 import MainInput from "@/ui/MainInput.vue";
-import ButtonRegistration from "@/ui/ButtonRegistration.vue";
+import MainButton from "@/ui/MainButton.vue";
 
 export default {
   name: "RegistrationView",
-  components: { ButtonRegistration, MainInput },
+  components: { MainButton, MainInput },
 
   data() {
     return {
@@ -27,7 +27,10 @@ export default {
     registration() {
       if (this.validateForm) {
         localStorage.setItem("email", this.email);
-        this.$router.push("/myHome");
+
+        this.$router.push({
+          name: "HomeView",
+        });
       }
     },
   },
@@ -45,7 +48,7 @@ export default {
         type="password"
       />
 
-      <ButtonRegistration :disabled="!validateForm" type="submit" />
+      <MainButton :disabled="!validateForm" type="submit" label="Войти" />
     </form>
   </div>
 </template>

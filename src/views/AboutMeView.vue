@@ -1,16 +1,16 @@
 <script>
 export default {
-  name: "HomeView",
+  name: "AboutMeView",
 };
 </script>
 
 <template>
-  <div class="home-view">
-    <h3>Home</h3>
+  <div class="about-me-view">
+    <h1>About me</h1>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.my-home-view {
+.about-me-view {
 }
 </style>

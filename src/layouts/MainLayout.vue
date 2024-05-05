@@ -11,6 +11,14 @@ export default {
 
       this.$router.push({ name: "RegistrationView" });
     },
+
+    about() {
+      this.$router.push({ name: "AboutMeView" });
+    },
+
+    home() {
+      this.$router.push({ name: "HomeView" });
+    },
   },
 };
 </script>
@@ -18,6 +26,8 @@ export default {
 <template>
   <div class="main-layout">
     <header>
+      <MainButton label="Home" @click="home" />
+      <MainButton label="About" @click="about" />
       <MainButton label="Выйти" @click="exit" />
     </header>
 

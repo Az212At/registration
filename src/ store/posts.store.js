@@ -1,10 +1,13 @@
+import { apiGetPosts } from "@/api/posts";
+import { defineStore } from "pinia";
+
 export const usePostsStore = defineStore("posts-store", {
   state: () => ({
     posts: [],
   }),
 
   actions: {
-    getPosts()  {
+    getPosts() {
       return new Promise((resolve, reject) => {
         apiGetPosts()
           .then((response) => {
@@ -13,9 +16,8 @@ export const usePostsStore = defineStore("posts-store", {
           })
           .catch((error) => {
             reject(error);
-          })
-      }
-    });
-},
-}
+          });
+      });
+    },
+  },
 });

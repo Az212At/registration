@@ -1,6 +1,16 @@
 <script>
 export default {
   name: "HomeView",
+
+  mounted() {
+    function usePostStore() {
+      return undefined;
+    }
+
+    const postStore = usePostStore();
+
+    postStore.getPosts();
+  },
 };
 </script>
 

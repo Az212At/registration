@@ -11,7 +11,7 @@ export const usePostsStore = defineStore("posts-store", {
       return new Promise((resolve, reject) => {
         apiGetPosts()
           .then((response) => {
-            this.posts = response.data.data;
+            this.posts = response.data;
             resolve(response);
           })
           .catch((error) => {

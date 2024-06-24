@@ -1,5 +1,6 @@
 import { apiGetPosts } from "@/api/posts";
 import { defineStore } from "pinia";
+import API from "@/package/axios";
 
 export const usePostsStore = defineStore("posts-store", {
   state: () => ({
@@ -21,3 +22,7 @@ export const usePostsStore = defineStore("posts-store", {
     },
   },
 });
+
+export const apiEditPosts = (id, params) => {
+  return API.put(`posts/${id}`, params);
+};
